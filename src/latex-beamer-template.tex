@@ -1,0 +1,198 @@
+%! suppress = MissingLabel
+\documentclass[
+    12pt,           % better readability
+    aspectratio=169,
+    professionalfonts, % cleaner math/text fonts
+]{beamer}
+
+\usepackage{lmodern}
+\usetheme{CambridgeUS}
+
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{calligra}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{stackengine}
+\usepackage{inconsolata}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,        % internal links (sections)
+    urlcolor=blue,         % clickable URLs
+    citecolor=red,        % bibliography and citations
+}
+
+\newcommand \coeffA [3][A] {{\mathbf{#1}} \sb{#2,#3}}
+\newcommand \polynomialP [4][P]{{\mathbf{#1}}\sp{#2} \sb{#3}(#4)}
+\newcommand \bernoulli [2][B] {{#1}\sb{#2}}
+
+%\newcommand \anglePower [2]{\langle #1 \rangle \sp{#2}}
+%\newcommand \curvePower [2]{\{#1\}\sp{#2}}
+
+% central factorials and related symbols
+\newcommand \centralFactorial [2] {#1^{[#2]}}
+\newcommand \fallingFactorial [2] {\left(#1 \right)^{\underline{#2}}}
+\newcommand{\stirlingii}{\genfrac{\{}{\}}{0pt}{}}
+\newcommand{\eulerianNumber}{\genfrac{\langle}{\rangle}{0pt}{}}
+
+\newcommand{\KnuthRFoldSum}[3]{\Sigma^{#1}\,{#2}^{#3}}
+\newcommand{\KnuthRFoldPartialSum}[4]{\Sigma^{#1}_{#2}\,{#3}^{#4}}
+
+% metadata
+%\keywords{Polynomial identities,
+%    Finite differences,
+%    Binomial coefficients,
+%    Faulhaber's formula,
+%    Sums of powers,
+%    Bernoulli numbers,
+%    Bernoulli polynomials,
+%    Interpolation,
+%    Approximation,
+%    Discrete convolution,
+%    Combinatorics,
+%    Pascal's triangle,
+%    OEIS}
+%\hypersetup{
+%    pdftitle={LaTeX Beamer presentation template},
+%    pdfproducer={LaTeX},
+%    pdfcreator={pdflatex},
+%    pdfauthor={Petro Kolosov},
+%    pdfsubject={LaTeX Beamer presentation template},
+%    pdfkeywords={Polynomials,
+%    Finite differences,
+%    Interpolation,
+%    Approximation,
+%    Polynomial identities,
+%    Sums of powers,
+%    Power sums,
+%    Binomial theorem,
+%    Power function,
+%    Binomial coefficients,
+%    Multinomial coefficients,
+%    Bernoulli numbers,
+%    Bernoulli polynomials,
+%    Worpitzky identity,
+%    Pascal's triangle,
+%    Faulhaber's formula,
+%    Derivatives,
+%    Differential calculus,
+%    Partial differential equations,
+%    OEIS,
+%    Combinatorics,
+%    Discrete convolution,
+%    Sums of convolved powers,
+%    Convolved power sums,
+%    Dynamic systems,
+%    Time scales}
+%}
+
+
+\author[Petro Kolosov]{Petro Kolosov}
+\institute[DevOps Engineer]{DevOps Engineer}
+\title{Beamer presentation template}
+\subtitle{Beamer presentation template}
+\date{\today}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+    breaklines=true,
+    tabsize=2,
+    captionpos=b,
+}
+
+\begin{document}
+
+    \begin{frame}
+        \titlepage
+    \end{frame}
+
+    \begin{frame}
+        \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+    \end{frame}
+
+    \begin{frame}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=0.4\linewidth]{./sections/images/latex_configuration}
+        \end{figure}
+    \end{frame}
+
+
+    \section{Slide 1 Section}
+
+    \begin{frame}{Frame 1}
+        \begin{itemize}
+            \item test 1~\cite{knuth1993johann}
+            \item test 2~\cite{meijering2002chronology}
+            \item test 3
+        \end{itemize}
+        \begin{align*}
+            \sum_{t=0}^{n} \binom{n}{t} = 2^n
+        \end{align*}
+        \begin{align*}
+            \KnuthRFoldSum{0}{n}{m}   &= n^m \\
+            \KnuthRFoldSum{1}{n}{m}   &= \KnuthRFoldSum{0}{1}{m} + \KnuthRFoldSum{0}{2}{m} + \cdots + \KnuthRFoldSum{0}{n}{m} \\
+            \KnuthRFoldSum{r+1}{n}{m} &= \KnuthRFoldSum{r}{1}{m} + \KnuthRFoldSum{r}{2}{m} + \cdots + \KnuthRFoldSum{r}{n}{m}
+        \end{align*}
+    \end{frame}
+
+
+    \section{Slide 2 Section}
+
+    \subsection{Slide 2 Subsection}
+
+    \begin{frame}{Frame 2}
+        \begin{itemize}
+            \item test 1~\cite{knuth1993johann}
+            \item test 2~\cite{meijering2002chronology}
+            \item test 3
+        \end{itemize}
+    \end{frame}
+
+
+    \section{Slide 3 Enumerate Section}
+
+    \subsection{Slide 3 Enumerate Subsection}
+
+    \begin{frame}{Frame 3 Enumerate}
+        \begin{enumerate}
+            \item test 1~\cite{knuth1993johann}
+            \item test 2~\cite{meijering2002chronology}
+            \item test 3
+        \end{enumerate}
+    \end{frame}
+
+
+    \section{Bibliography}
+
+    \begin{frame}
+        \bibliographystyle{unsrt}
+        \bibliography{latex-beamer-template}
+    \end{frame}
+
+    \begin{frame}
+        \begin{center}
+        {\Huge\calligra Thanks!}
+        \end{center}
+    \end{frame}
+
+    \section{License}
+
+    \begin{frame}
+        \input{sections/license}
+    \end{frame}
+
+\end{document}

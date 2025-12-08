@@ -18,13 +18,13 @@ jobs:
   build-pdf:
     uses: kolosovpetro/github-latex-template/.github/workflows/build-pdf-template.yml@main
     with:
-      file_name: 'GithubLatexTemplate'
+      file_name: 'latex-beamer-template'
       enable_patch_version: true
       runs_on: 'ubuntu-latest'
       workflow_name: 'Build PDF'
       build_assets_path: |
-        src/GithubLatexTemplate.tex
-        src/GithubLatexTemplate.bbl
-        src/GithubLatexTemplate.bib
+        src/latex-beamer-template.tex
+        src/latex-beamer-template.bbl
+        src/latex-beamer-template.bib
         src/sections
       working_directory_for_latex: 'src'
