@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 22 items.
 Database file #1: latex-beamer-template.bib
-You've used 5 entries,
+You've used 2 entries,
             1791 wiz_defined-function locations,
-            471 strings with 4568 characters,
-and the built_in function-call counts, 666 in all, are:
-= -- 53
-> -- 20
+            463 strings with 4068 characters,
+and the built_in function-call counts, 482 in all, are:
+= -- 50
+> -- 8
 < -- 0
-+ -- 10
-- -- 5
-* -- 9
-:= -- 111
-add.period$ -- 16
-call.type$ -- 5
-change.case$ -- 5
++ -- 4
+- -- 2
+* -- 36
+:= -- 81
+add.period$ -- 8
+call.type$ -- 2
+change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 28
-empty$ -- 87
-format.name$ -- 5
-if$ -- 151
+cite$ -- 2
+duplicate$ -- 18
+empty$ -- 49
+format.name$ -- 2
+if$ -- 101
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 1
-newline$ -- 29
-num.names$ -- 5
-pop$ -- 30
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 15
+num.names$ -- 2
+pop$ -- 0
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 15
+skip$ -- 6
 stack$ -- 0
-substring$ -- 0
-swap$ -- 5
+substring$ -- 50
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 5
-width$ -- 6
-write$ -- 54
+while$ -- 6
+width$ -- 3
+write$ -- 28
