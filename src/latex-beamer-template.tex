@@ -1,8 +1,11 @@
 %! suppress = MissingLabel
-\documentclass{beamer}
-%\documentclass[aspectratio=169]{beamer} % 16:9 aspect ratio
+\documentclass[
+    12pt,           % better readability
+    aspectratio=169,
+    professionalfonts, % cleaner math/text fonts
+]{beamer}
 
-\usepackage{hyperref}
+%\usepackage{hyperref}
 \usepackage{latexsym}
 \usepackage{amsmath}
 \usepackage{xcolor}
@@ -10,9 +13,10 @@
 \usepackage{booktabs}
 \usepackage{calligra}
 \usepackage{graphicx}
-\usepackage{pstricks}
+\usepackage{tikz}
 \usepackage{listings}
 \usepackage{stackengine}
+\usepackage{inconsolata}
 
 
 \author{Petro Kolosov}
@@ -29,6 +33,9 @@
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 \definecolor{halfgray}{gray}{0.55}
 
+\setlength{\parskip}{4pt}
+\setbeamertemplate{itemize items}[circle]
+
 \lstset{
     basicstyle=\ttfamily\small,
     keywordstyle=\bfseries\color{deepblue},
@@ -38,6 +45,16 @@
     numberstyle=\small\color{halfgray},
     rulesepcolor=\color{red!20!green!20!blue!20},
     frame=shadowbox,
+    breaklines=true,
+    tabsize=2,
+    captionpos=b,
+}
+
+% Outline at start of each section
+\AtBeginSection[]{
+    \begin{frame}{Outline}
+        \tableofcontents[currentsection]
+    \end{frame}
 }
 
 
@@ -45,15 +62,17 @@
 
     \begin{frame}
         \titlepage
-        \begin{figure}[htpb]
-            \begin{center}
-                \includegraphics[width=0.4\linewidth]{./sections/images/latex_configuration}
-            \end{center}\label{fig:figure}
-        \end{figure}
     \end{frame}
 
     \begin{frame}
         \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+    \end{frame}
+
+    \begin{frame}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=0.4\linewidth]{./sections/images/latex_configuration}
+        \end{figure}
     \end{frame}
 
 
@@ -81,16 +100,16 @@
     \end{frame}
 
 
-    \section{Slide 3}
+    \section{Slide 3 Enumerate}
 
-    \subsection{Slide 3}
+    \subsection{Slide 3 Enumerate}
 
-    \begin{frame}{Slide 3}
-        \begin{itemize}
+    \begin{frame}{Slide 3 Enumerate}
+        \begin{enumerate}
             \item test 1~\cite{knuth1993johann}
             \item test 2~\cite{meijering2002chronology}
             \item test 3
-        \end{itemize}
+        \end{enumerate}
     \end{frame}
 
 
