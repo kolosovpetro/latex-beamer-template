@@ -21,6 +21,19 @@
 \usepackage{stackengine}
 \usepackage{inconsolata}
 
+\newcommand \coeffA [3][A] {{\mathbf{#1}} \sb{#2,#3}}
+\newcommand \polynomialP [4][P]{{\mathbf{#1}}\sp{#2} \sb{#3}(#4)}
+\newcommand \bernoulli [2][B] {{#1}\sb{#2}}
+
+%\newcommand \anglePower [2]{\langle #1 \rangle \sp{#2}}
+%\newcommand \curvePower [2]{\{#1\}\sp{#2}}
+
+% central factorials and related symbols
+\newcommand \centralFactorial [2] {#1^{[#2]}}
+\newcommand \fallingFactorial [2] {\left(#1 \right)^{\underline{#2}}}
+\newcommand{\stirlingii}{\genfrac{\{}{\}}{0pt}{}}
+\newcommand{\eulerianNumber}{\genfrac{\langle}{\rangle}{0pt}{}}
+
 % metadata
 %\keywords{Polynomial identities,
 %    Finite differences,
@@ -108,9 +121,9 @@
     \end{frame}
 
 
-    \section{Slide 1}
+    \section{Slide 1 Section}
 
-    \begin{frame}{Slide 1}
+    \begin{frame}{Frame 1}
         \begin{itemize}
             \item test 1~\cite{knuth1993johann}
             \item test 2~\cite{meijering2002chronology}
@@ -119,11 +132,11 @@
     \end{frame}
 
 
-    \section{Slide 2}
+    \section{Slide 2 Section}
 
-    \subsection{Slide 2}
+    \subsection{Slide 2 Subsection}
 
-    \begin{frame}
+    \begin{frame}{Frame 2}
         \begin{itemize}
             \item test 1~\cite{knuth1993johann}
             \item test 2~\cite{meijering2002chronology}
@@ -132,11 +145,11 @@
     \end{frame}
 
 
-    \section{Slide 3 Enumerate}
+    \section{Slide 3 Enumerate Section}
 
-    \subsection{Slide 3 Enumerate}
+    \subsection{Slide 3 Enumerate Subsection}
 
-    \begin{frame}{Slide 3 Enumerate}
+    \begin{frame}{Frame 3 Enumerate}
         \begin{enumerate}
             \item test 1~\cite{knuth1993johann}
             \item test 2~\cite{meijering2002chronology}
