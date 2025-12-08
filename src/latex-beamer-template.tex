@@ -5,6 +5,9 @@
     professionalfonts, % cleaner math/text fonts
 ]{beamer}
 
+\usepackage{lmodern}
+\usetheme{CambridgeUS}
+
 %\usepackage{hyperref}
 \usepackage{latexsym}
 \usepackage{amsmath}
@@ -18,23 +21,60 @@
 \usepackage{stackengine}
 \usepackage{inconsolata}
 
+% metadata
+%\keywords{Polynomial identities,
+%    Finite differences,
+%    Binomial coefficients,
+%    Faulhaber's formula,
+%    Sums of powers,
+%    Bernoulli numbers,
+%    Bernoulli polynomials,
+%    Interpolation,
+%    Approximation,
+%    Discrete convolution,
+%    Combinatorics,
+%    Pascal's triangle,
+%    OEIS}
+%\hypersetup{
+%    pdftitle={LaTeX Beamer presentation template},
+%    pdfproducer={LaTeX},
+%    pdfcreator={pdflatex},
+%    pdfauthor={Petro Kolosov},
+%    pdfsubject={LaTeX Beamer presentation template},
+%    pdfkeywords={Polynomials,
+%    Finite differences,
+%    Interpolation,
+%    Approximation,
+%    Polynomial identities,
+%    Sums of powers,
+%    Power sums,
+%    Binomial theorem,
+%    Power function,
+%    Binomial coefficients,
+%    Multinomial coefficients,
+%    Bernoulli numbers,
+%    Bernoulli polynomials,
+%    Worpitzky identity,
+%    Pascal's triangle,
+%    Faulhaber's formula,
+%    Derivatives,
+%    Differential calculus,
+%    Partial differential equations,
+%    OEIS,
+%    Combinatorics,
+%    Discrete convolution,
+%    Sums of convolved powers,
+%    Convolved power sums,
+%    Dynamic systems,
+%    Time scales}
+%}
 
-\author{Petro Kolosov}
+
+\author[Petro Kolosov]{Petro Kolosov}
+\institute[DevOps Engineer]{DevOps Engineer}
 \title{Beamer presentation template}
 \subtitle{Beamer presentation template}
-\institute{Information technologies}
 \date{\today}
-
-% defs
-\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
-\def\env#1{\texttt{\color{blue}\footnotesize #1}}
-\definecolor{deepblue}{rgb}{0,0,0.5}
-\definecolor{deepred}{rgb}{0.6,0,0}
-\definecolor{deepgreen}{rgb}{0,0.5,0}
-\definecolor{halfgray}{gray}{0.55}
-
-\setlength{\parskip}{4pt}
-\setbeamertemplate{itemize items}[circle]
 
 \lstset{
     basicstyle=\ttfamily\small,
@@ -49,14 +89,6 @@
     tabsize=2,
     captionpos=b,
 }
-
-% Outline at start of each section
-\AtBeginSection[]{
-    \begin{frame}{Outline}
-        \tableofcontents[currentsection]
-    \end{frame}
-}
-
 
 \begin{document}
 
