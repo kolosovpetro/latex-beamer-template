@@ -41,6 +41,9 @@
 \newcommand{\stirlingii}{\genfrac{\{}{\}}{0pt}{}}
 \newcommand{\eulerianNumber}{\genfrac{\langle}{\rangle}{0pt}{}}
 
+\newcommand{\KnuthRFoldSum}[3]{\Sigma^{#1}\,{#2}^{#3}}
+\newcommand{\KnuthRFoldPartialSum}[4]{\Sigma^{#1}_{#2}\,{#3}^{#4}}
+
 % metadata
 %\keywords{Polynomial identities,
 %    Finite differences,
@@ -136,6 +139,14 @@
             \item test 2~\cite{meijering2002chronology}
             \item test 3
         \end{itemize}
+        \begin{align*}
+            \sum_{t=0}^{n} \binom{n}{t} = 2^n
+        \end{align*}
+        \begin{align*}
+            \KnuthRFoldSum{0}{n}{m}   &= n^m \\
+            \KnuthRFoldSum{1}{n}{m}   &= \KnuthRFoldSum{0}{1}{m} + \KnuthRFoldSum{0}{2}{m} + \cdots + \KnuthRFoldSum{0}{n}{m} \\
+            \KnuthRFoldSum{r+1}{n}{m} &= \KnuthRFoldSum{r}{1}{m} + \KnuthRFoldSum{r}{2}{m} + \cdots + \KnuthRFoldSum{r}{n}{m}
+        \end{align*}
     \end{frame}
 
 
