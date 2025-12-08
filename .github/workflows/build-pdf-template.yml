@@ -56,9 +56,7 @@ jobs:
         if: ${{ inputs.enable_patch_version }}
         uses: gittools/actions/gitversion/execute@v4.2.0
         with:
-          useConfigFile: true
           configFilePath: GitVersion.yml
-          additionalArguments: /dynamicRepository
 
       - name: '📜 Print Version 📜'
         if: ${{ inputs.enable_patch_version }}
