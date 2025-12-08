@@ -8,7 +8,7 @@
 \usepackage{lmodern}
 \usetheme{CambridgeUS}
 
-%\usepackage{hyperref}
+\usepackage{hyperref}
 \usepackage{latexsym}
 \usepackage{amsmath}
 \usepackage{xcolor}
@@ -20,6 +20,13 @@
 \usepackage{listings}
 \usepackage{stackengine}
 \usepackage{inconsolata}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,        % internal links (sections)
+    urlcolor=blue,         % clickable URLs
+    citecolor=red,        % bibliography and citations
+}
 
 \newcommand \coeffA [3][A] {{\mathbf{#1}} \sb{#2,#3}}
 \newcommand \polynomialP [4][P]{{\mathbf{#1}}\sp{#2} \sb{#3}(#4)}
@@ -169,6 +176,12 @@
         \begin{center}
         {\Huge\calligra Thanks!}
         \end{center}
+    \end{frame}
+
+    \section{License}
+
+    \begin{frame}
+        \input{sections/license}
     \end{frame}
 
 \end{document}
