@@ -49,6 +49,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
+          ref: ${{ github.ref }}
 
       - name: '⬇️ Install GitVersion ⬇️'
         if: ${{ inputs.enable_patch_version }}
@@ -61,7 +62,9 @@ jobs:
         if: ${{ inputs.enable_patch_version }}
         uses: gittools/actions/gitversion/execute@v4.2.0
         with:
+          useConfigFile: true
           configFilePath: GitVersion.yml
+          additionalArguments: /dynamicRepository
 
       - name: '📜 Print Version 📜'
         if: ${{ inputs.enable_patch_version }}

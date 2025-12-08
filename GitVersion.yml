@@ -1,1 +1,15 @@
 mode: ContinuousDelivery
+
+branches:
+  main:
+    regex: ^main$
+    tag: ''
+  pull-request:
+    regex: ^(pull|pr)[/-]
+    tag: pr
+  feature:
+    regex: ^features?[/-]
+    tag: feature
+  tags:
+    regex: ^v\d+\.\d+\.\d+$
+    is-release: true
