@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 [//]: # ()
 [//]: # (### Changed)
 
+## [1.0.4] - In Progress
+
+### Change
+
+- Move metadata to separate folder
+
 
 ## [1.0.3] - 19-Dec-2025
 
