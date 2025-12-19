@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 ### Changed
 
 - Add encoding exclusions: `.m` and `.nb`
+- Use GitHub actions from `github-latex-template`
 
 ## [1.0.2] - 08-12-2025
 
