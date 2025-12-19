@@ -1,0 +1,8 @@
+\begin{frame}
+    Let be the recurrence for R-fold sums of powers, see~\cite{knuth1993johann}
+    \begin{align*}
+        \KnuthRFoldSum{0}{n}{m}   &= n^m \\
+        \KnuthRFoldSum{1}{n}{m}   &= \KnuthRFoldSum{0}{1}{m} + \KnuthRFoldSum{0}{2}{m} + \cdots + \KnuthRFoldSum{0}{n}{m} \\
+        \KnuthRFoldSum{r+1}{n}{m} &= \KnuthRFoldSum{r}{1}{m} + \KnuthRFoldSum{r}{2}{m} + \cdots + \KnuthRFoldSum{r}{n}{m}
+    \end{align*}
+\end{frame}

@@ -1,0 +1,49 @@
+\begin{frame}
+    %! suppress = MissingLabel
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{c|cccccccc}
+            $n \backslash k$ & 0     & 1     & 2      & 3      & 4      & 5      & 6     & 7    \\ \hline
+            0                & 1     &       &        &        &        &        &       &      \\
+            1                & 4     & 1     &        &        &        &        &       &      \\
+            2                & 16    & 9     & 2      &        &        &        &       &      \\
+            3                & 64    & 61    & 30     & 6      &        &        &       &      \\
+            4                & 256   & 369   & 302    & 132    & 24     &        &       &      \\
+            5                & 1024  & 2101  & 2550   & 1830   & 720    & 120    &       &      \\
+            6                & 4096  & 11529 & 19502  & 20460  & 13080  & 4680   & 720   &      \\
+            7                & 16384 & 61741 & 140070 & 201726 & 186480 & 107520 & 35280 & 5040 \\
+        \end{tabular}
+        \caption{Triangle $T(4, n, k)$.}
+    \end{table}
+\end{frame}
+
+\begin{frame}
+    \begin{align*}
+        n^0 &= 1   \binom{n-4}{0}  \\
+        n^1 &= 4   \binom{n-4}{0}  + 1   \binom{n-4}{1}  \\
+        n^2 &= 16  \binom{n-4}{0}  + 9   \binom{n-4}{1} + 2   \binom{n-4}{2} \\
+        n^3 &= 64  \binom{n-4}{0}  + 61  \binom{n-4}{1} + 30  \binom{n-4}{2} + 6   \binom{n-4}{3} \\
+        n^4 &= 256 \binom{n-4}{0}  + 369 \binom{n-4}{1} + 302 \binom{n-4}{2} + 132 \binom{n-4}{3} + 24 \binom{n-4}{4}
+    \end{align*}
+\end{frame}
+
+\begin{frame}
+    \begin{align*}
+        \KnuthRFoldSum{1}{n}{0} &= 1  \left( \binom{n-3}{1} + \binom{3}{1}  \right) \\
+        \KnuthRFoldSum{1}{n}{1} &= 4  \left( \binom{n-3}{1} + \binom{3}{1}  \right)  + 1  \left( \binom{n-3}{2} - \binom{4}{2}  \right) \\
+        \KnuthRFoldSum{1}{n}{2} &= 16 \left( \binom{n-3}{1} + \binom{3}{1}  \right)  + 9  \left( \binom{n-3}{2} - \binom{4}{2}  \right)      + 2  \left( \binom{n-2}{3} + \binom{5}{3}  \right) \\
+        \KnuthRFoldSum{1}{n}{3} &= 64 \left( \binom{n-3}{1} + \binom{3}{1}  \right)  + 61 \left( \binom{n-3}{2} - \binom{4}{2}  \right) \\ & + 30 \left( \binom{n-3}{3} + \binom{5}{3}  \right) + 6 \left( \binom{n-3}{4} - \binom{6}{4}  \right) \\
+        \KnuthRFoldSum{1}{n}{m} &= \sum_{j=0}^{m} T(4,m,j) \left[ \binom{n-3}{j+1} + (-1)^j \binom{j+3}{j+1}  \right]
+    \end{align*}
+\end{frame}
+
+\begin{frame}
+    %! suppress = MissingLabel
+    \begin{figure}[htpb]
+        \setlength{\abovecaptionskip}{0pt} % reduce space above caption
+        \setlength{\belowcaptionskip}{0pt} % reduce space below caption
+        \centering
+        \includegraphics[width=0.6\linewidth]{./images/pascals-triangle-4}
+        \caption{Pascal's Triangle diagonal 4.}
+    \end{figure}
+\end{frame}
