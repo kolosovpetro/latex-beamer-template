@@ -45,6 +45,6 @@
 Compiled document looks like as follows
 
 <p align="center">
-  <img src="src/sections/images/template_example_1.png" alt="template_example"/>
-  <img src="src/sections/images/template_example_2.png" alt="template_example"/>
+  <img src="src/images/template_example_1.png" alt="template_example"/>
+  <img src="src/images/template_example_2.png" alt="template_example"/>
 </p>
