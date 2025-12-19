@@ -26,5 +26,7 @@ jobs:
         src/latex-beamer-template.tex
         src/latex-beamer-template.bbl
         src/latex-beamer-template.bib
-        src/sections
+        src/images
+        src/slides
+        src/metadata
       working_directory_for_latex: 'src'

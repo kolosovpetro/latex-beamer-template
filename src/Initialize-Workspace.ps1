@@ -106,4 +106,8 @@ catch
     Write-Host "Skipping renovate deletion..."
 }
 
+.\..\scripts\Test-Encoding.ps1 -Autofix
+
+Write-Host "Fix encoding is complete." -ForegroundColor Green
+
 Write-Section "Execurtion has been completed succesfully: $LASTEXITCODE" -Color Green
