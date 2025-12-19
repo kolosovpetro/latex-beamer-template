@@ -8,14 +8,14 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 [//]: # (## [1.0.0] - In progress)
 
 [//]: # ()
+
 [//]: # (### Changed)
 
-## [1.0.4] - In Progress
+## [1.0.4] - 19-Dec-2025
 
-### Change
+### Changed
 
 - Move metadata to separate folder
-
 
 ## [1.0.3] - 19-Dec-2025
 
