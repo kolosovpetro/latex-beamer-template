@@ -1,0 +1,49 @@
+\begin{frame}
+    %! suppress = MissingLabel
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{c|cccccccc}
+            $n \backslash k$ & 0      & 1      & 2      & 3      & 4      & 5      & 6     & 7    \\ \hline
+            0                & 1      &        &        &        &        &        &       &      \\
+            1                & 6      & 1      &        &        &        &        &       &      \\
+            2                & 36     & 13     & 2      &        &        &        &       &      \\
+            3                & 216    & 127    & 42     & 6      &        &        &       &      \\
+            4                & 1296   & 1105   & 590    & 180    & 24     &        &       &      \\
+            5                & 7776   & 9031   & 6930   & 3390   & 960    & 120    &       &      \\
+            6                & 46656  & 70993  & 73502  & 51300  & 23160  & 6120   & 720   &      \\
+            7                & 279936 & 543607 & 730002 & 682206 & 436800 & 183120 & 45360 & 5040 \\
+        \end{tabular}
+        \caption{Triangle $T(6, n, k)$.}
+    \end{table}
+\end{frame}
+
+\begin{frame}
+    \begin{align*}
+        n^0 &= 1    \binom{n-6}{0}  \\
+        n^1 &= 6    \binom{n-6}{0} + 1    \binom{n-6}{1}  \\
+        n^2 &= 36   \binom{n-6}{0} + 13   \binom{n-6}{1}  + 2   \binom{n-6}{2} \\
+        n^3 &= 216  \binom{n-6}{0} + 127  \binom{n-6}{1}  + 42  \binom{n-6}{2}  + 6   \binom{n-6}{3} \\
+        n^4 &= 1296 \binom{n-6}{0} + 1105 \binom{n-6}{1}  + 590 \binom{n-6}{2}  + 180 \binom{n-6}{3} + 24 \binom{n-6}{4}
+    \end{align*}
+\end{frame}
+
+\begin{frame}
+    \begin{align*}
+        \KnuthRFoldSum{1}{n}{0} &= 1   \left( \binom{n-5}{1}  + \binom{5}{1}  \right) \\
+        \KnuthRFoldSum{1}{n}{1} &= 6   \left( \binom{n-5}{1}  + \binom{5}{1}  \right)  + 1   \left( \binom{n-5}{2} - \binom{6}{2}  \right) \\
+        \KnuthRFoldSum{1}{n}{2} &= 36  \left( \binom{n-5}{1}  + \binom{5}{1}  \right)  + 13  \left( \binom{n-5}{2} - \binom{6}{2}  \right)      + 2  \left( \binom{n-5}{3} + \binom{7}{3}  \right) \\
+        \KnuthRFoldSum{1}{n}{3} &= 216 \left( \binom{n-5}{1}  + \binom{5}{1}  \right)  + 127 \left( \binom{n-5}{2} - \binom{6}{2}  \right) \\ & + 42 \left( \binom{n-5}{3} + \binom{7}{3}  \right) + 6 \left( \binom{n-5}{4} - \binom{8}{4}  \right) \\
+        \KnuthRFoldSum{1}{n}{m} &= \sum_{j=0}^{m} T(6,m,j) \left[ \binom{n-5}{j+1} + (-1)^j \binom{j+5}{j+1}  \right]
+    \end{align*}
+\end{frame}
+
+\begin{frame}
+    %! suppress = MissingLabel
+    \begin{figure}[htpb]
+        \setlength{\abovecaptionskip}{0pt} % reduce space above caption
+        \setlength{\belowcaptionskip}{0pt} % reduce space below caption
+        \centering
+        \includegraphics[width=0.6\linewidth]{./images/pascals-triangle-6}
+        \caption{Pascal's Triangle diagonal 6.}
+    \end{figure}
+\end{frame}

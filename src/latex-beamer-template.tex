@@ -28,13 +28,9 @@
     citecolor=red,        % bibliography and citations
 }
 
-\newcommand \coeffA [3][A] {{\mathbf{#1}} \sb{#2,#3}}
-\newcommand \polynomialP [4][P]{{\mathbf{#1}}\sp{#2} \sb{#3}(#4)}
 \newcommand \bernoulli [2][B] {{#1}\sb{#2}}
 
-%\newcommand \anglePower [2]{\langle #1 \rangle \sp{#2}}
-%\newcommand \curvePower [2]{\{#1\}\sp{#2}}
-
+%! suppress = TooLargeSection
 % central factorials and related symbols
 \newcommand \centralFactorial [2] {#1^{[#2]}}
 \newcommand \fallingFactorial [2] {\left(#1 \right)^{\underline{#2}}}
@@ -45,58 +41,48 @@
 \newcommand{\KnuthRFoldPartialSum}[4]{\Sigma^{#1}_{#2}\,{#3}^{#4}}
 
 % metadata
-%\keywords{Polynomial identities,
-%    Finite differences,
-%    Binomial coefficients,
-%    Faulhaber's formula,
-%    Sums of powers,
-%    Bernoulli numbers,
-%    Bernoulli polynomials,
-%    Interpolation,
-%    Approximation,
-%    Discrete convolution,
-%    Combinatorics,
-%    Pascal's triangle,
-%    OEIS}
-%\hypersetup{
-%    pdftitle={LaTeX Beamer presentation template},
-%    pdfproducer={LaTeX},
-%    pdfcreator={pdflatex},
-%    pdfauthor={Petro Kolosov},
-%    pdfsubject={LaTeX Beamer presentation template},
-%    pdfkeywords={Polynomials,
-%    Finite differences,
-%    Interpolation,
-%    Approximation,
-%    Polynomial identities,
+%\keywords{Faulhaber's formula,
 %    Sums of powers,
 %    Power sums,
 %    Binomial theorem,
-%    Power function,
+%    Polynomials,
+%    Finite differences,
+%    Interpolation,
 %    Binomial coefficients,
-%    Multinomial coefficients,
 %    Bernoulli numbers,
 %    Bernoulli polynomials,
 %    Worpitzky identity,
 %    Pascal's triangle,
-%    Faulhaber's formula,
-%    Derivatives,
-%    Differential calculus,
-%    Partial differential equations,
+%    Newton formula,
 %    OEIS,
-%    Combinatorics,
-%    Discrete convolution,
-%    Sums of convolved powers,
-%    Convolved power sums,
-%    Dynamic systems,
-%    Time scales}
+%    Combinatorics}
+%\hypersetup{
+%    pdftitle={Formulas for Sums of Powers},
+%    pdfproducer={LaTeX},
+%    pdfcreator={pdflatex},
+%    pdfauthor={Petro Kolosov},
+%    pdfsubject={Formulas for Sums of Powers},
+%    pdfkeywords={Faulhaber's formula,
+%    Sums of powers,
+%    Power sums,
+%    Binomial theorem,
+%    Polynomials,
+%    Finite differences,
+%    Interpolation,
+%    Binomial coefficients,
+%    Bernoulli numbers,
+%    Bernoulli polynomials,
+%    Worpitzky identity,
+%    Pascal's triangle,
+%    Newton formula,
+%    OEIS,
+%    Combinatorics}
 %}
 
 
 \author[Petro Kolosov]{Petro Kolosov}
 \institute[DevOps Engineer]{DevOps Engineer}
-\title{Beamer presentation template}
-\subtitle{Beamer presentation template}
+\title{LaTeX Beamer template}
 \date{\today}
 
 \lstset{
@@ -123,76 +109,23 @@
         \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
     \end{frame}
 
-    \begin{frame}
-        \begin{figure}[htpb]
-            \centering
-            \includegraphics[width=0.4\linewidth]{./sections/images/latex_configuration}
-        \end{figure}
-    \end{frame}
 
+    \section{Formulas for Sums of Powers}
 
-    \section{Slide 1 Section}
+    \subsection{Sums of Powers Definition}
+    \input{slides/01_definitions}
 
-    \begin{frame}{Frame 1}
-        \begin{itemize}
-            \item test 1~\cite{knuth1993johann}
-            \item test 2~\cite{meijering2002chronology}
-            \item test 3
-        \end{itemize}
-        \begin{align*}
-            \sum_{t=0}^{n} \binom{n}{t} = 2^n
-        \end{align*}
-        \begin{align*}
-            \KnuthRFoldSum{0}{n}{m}   &= n^m \\
-            \KnuthRFoldSum{1}{n}{m}   &= \KnuthRFoldSum{0}{1}{m} + \KnuthRFoldSum{0}{2}{m} + \cdots + \KnuthRFoldSum{0}{n}{m} \\
-            \KnuthRFoldSum{r+1}{n}{m} &= \KnuthRFoldSum{r}{1}{m} + \KnuthRFoldSum{r}{2}{m} + \cdots + \KnuthRFoldSum{r}{n}{m}
-        \end{align*}
-    \end{frame}
-
-
-    \section{Slide 2 Section}
-
-    \subsection{Slide 2 Subsection}
-
-    \begin{frame}{Frame 2}
-        \begin{itemize}
-            \item test 1~\cite{knuth1993johann}
-            \item test 2~\cite{meijering2002chronology}
-            \item test 3
-        \end{itemize}
-    \end{frame}
-
-
-    \section{Slide 3 Enumerate Section}
-
-    \subsection{Slide 3 Enumerate Subsection}
-
-    \begin{frame}{Frame 3 Enumerate}
-        \begin{enumerate}
-            \item test 1~\cite{knuth1993johann}
-            \item test 2~\cite{meijering2002chronology}
-            \item test 3
-        \end{enumerate}
-    \end{frame}
+    \subsection{Simple Sums of Powers}
+    \input{slides/02_simple_sums_of_powers}
 
 
     \section{Bibliography}
-
     \begin{frame}
         \bibliographystyle{unsrt}
         \bibliography{latex-beamer-template}
     \end{frame}
 
-    \begin{frame}
-        \begin{center}
-        {\Huge\calligra Thanks!}
-        \end{center}
-    \end{frame}
-
     \section{License}
-
-    \begin{frame}
-        \input{sections/license}
-    \end{frame}
+    \input{license}
 
 \end{document}

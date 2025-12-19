@@ -6,12 +6,4 @@
 \newblock {\em {Mathematics of Computation}}, 61(203):277--294, 1993.
 \newblock \url{https://arxiv.org/abs/math/9207222}.
 
-\bibitem{meijering2002chronology}
-{Meijering, Erik}.
-\newblock {A chronology of interpolation: from ancient astronomy to modern
-  signal and image processing}.
-\newblock {\em {Proceedings of the IEEE}}, 90(3):319--342, 2002.
-\newblock
-  \url{https://infoscience.epfl.ch/record/63085/files/meijering0201.pdf}.
-
 \end{thebibliography}
